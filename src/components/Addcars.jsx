@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Footer from './Footer';
 
-const Addluxuryhouse = () => {
+
+const Addcars = () => {
   // declaring state variables
   const[product_name,setProductName] = useState('');
   const[product_description,setProductDescription] = useState('');
@@ -27,7 +28,7 @@ const[success,setSuccess] = useState("")
     formData.append("product_photo",product_photo)
 
     // posting data to base url(api)
-    const response = await axios.post("",formData)
+    const response = await axios.post("https://frankoryx.alwaysdata.net/api/add_product",formData)
     setLoading("")
     setSuccess(response.data.success)
   } catch (error) {
@@ -36,27 +37,30 @@ const[success,setSuccess] = useState("")
   }
   return (
     <div className='row justify-content-center'>
+      <Navbar/>
       <nav>
         <Link to="/" className='btn btn-dark'>GET ALL PRODUCTS</Link>
       </nav>
       {error}
       {success}
       {loading}
-      <div  className='col-md-6 card transparent  m-2 p-4'><br /> <br />
-        <h1 className='text-primary'>Addluxuryhouse</h1><br />
-        <input type="text" 
+      <div  className='col-md-6 card cover  m-2 p-4'>
+        <h1 className='text-primary'>Addcars</h1>
+        <form onSubmit={handleSubmit}>
+         <input type="text" 
          placeholder='product_name' 
          className='form-control'
          value={product_name}
          onChange={(e) =>setProductName(e.target.value)}
          required
          /><br/>
-        <textarea
+           <textarea
            placeholder='product_description' 
            className='form-control'
             value={product_description}
            onChange={(e) =>setProductDescription(e.target.value)}
            required>
+           
            </textarea>
           <input
            type="number" 
@@ -76,13 +80,15 @@ const[success,setSuccess] = useState("")
           /><br /><br />
            <input 
            type="submit" 
-           value="Add product"
+           value="Submit"
             className='btn btn-outline-danger w-100'
             /><br />
+        </form>
       </div>
-     <Footer/>
-      </div>
+   
+    </div>
+
   )
 }
 
-export default Addluxuryhouse
+export default Addcars

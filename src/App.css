@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  background-color:lightslategrey;
+  background-image: url(/src/components/images/pexels-porsche-1851246_1920.jpg);
   min-height: 100vh;
+  
 }
 
 .App-logo {
@@ -37,4 +38,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+.body{
+ background-image: url(/src/components/images/pexels-porsche-1851246_1920.jpg);
+}
+
+
+.MyCarousel_img {
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
 }

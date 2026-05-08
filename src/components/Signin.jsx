@@ -1,7 +1,8 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import Footer from './Footer'
+import { Link, useNavigate,} from 'react-router-dom';
+import Navbar from './Navbar';
+import { Nav } from 'react-bootstrap';
 
 
 
@@ -45,22 +46,23 @@ const Signin = () => {
 
   return (
     <div className='row justify-content-center'>
-      <div className='col-md-6  m-2 p-4'>
-        <h1 className='text-primary'>Signin</h1>
+      <Navbar/>
+      <div className='col-md-6 card shadow m-2 p-4 bg-success'>
+        <h1 className='text-warning'>Signin</h1>
         {/* binding variables */}
         {loading}<br/>
         {error}<br/>
         {success}<br/>
+        
        
         
         <form onSubmit={handleSignin}>
           <input type="email" placeholder='Enert email' className='form-control' onChange={(e)=>setEmail(e.target.value)}/><br/>
           <input type="password" placeholder='Enter password' className='form-control' onChange={(e)=>setPassword(e.target.value)}/><br/>
-          <input type="submit" value="Signin" className='btn btn-outline-info w-100'/><br />
+          <input type="submit" value="Signin" className='btn btn-primary w-75'/><br />
           <Link to='/signup'>Don't have an account ? Signup</Link>
         </form>
       </div>
-     <Footer/>
     </div>
   )
 }
