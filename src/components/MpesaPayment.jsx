@@ -53,11 +53,11 @@ const MpesaPayment = () => {
 
       <div className='col-md-6 card shadow m-2 p-4 bg-success text-light mb-2'>
         <h3>LIPA NA M-PESA</h3>
-        <img src={img_url + car.car_photo} alt="" height={450} />
+        <img src={img_url + car.product_photo} alt="" height={450} />
 
         <div>
-          <h5>Car Name: {car.car_name}</h5>
-          <p>Car cost: {car.car_cost}</p>
+          <h5>Car Name: {car.product_name}</h5>
+          <p>Car cost: {car.product_cost}</p>
 
           <form onSubmit={handleSubmit}>
             <input
