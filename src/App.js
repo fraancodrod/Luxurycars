@@ -41,11 +41,13 @@ function App() {
 
           {/* 🌙 Dark mode toggle button (added only) */}
           <button
-            className="btn btn-primary ms-3"
-            onClick={() => setDarkMode(!darkMode)}
-          >
-            {darkMode ? "Light Mode" : "Dark Mode"}
-          </button>
+  className={`btn ms-3 ${darkMode ? "btn-dark" : "btn-light"}`}
+  onClick={() => setDarkMode(prev => !prev)}
+  aria-pressed={darkMode}
+  aria-label="Toggle dark mode"
+>
+  {darkMode ? "🌙 Dark Mode" : "☀️ Light Mode"}
+</button>
         </div>
 
         {/* Routing the components */}

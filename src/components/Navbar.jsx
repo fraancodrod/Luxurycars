@@ -70,6 +70,7 @@ function Navbar() {
               <li className="nav-item">
                 <NavLink to="/Signup" className="nav-link">signin</NavLink>
               </li>
+              
             </>
           )}
 

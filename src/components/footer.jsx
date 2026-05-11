@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="col-md-4 mb-3">
             <h5>CarVista</h5>
             <p className="small">
-             CarDealership is an online automotive marketplace that enables customers to conveniently browse, compare, and purchase new and pre-owned vehicles from the comfort of their homes. The platform offers a wide selection of cars, SUVs, and trucks, complete with detailed specifications, transparent pricing, and vehicle history information to support informed decision-making. With a focus on simplicity and customer satisfaction, Carvista also provides flexible financing options, trade-in services, and secure digital transactions, aiming to modernize the traditional car-buying experience through efficiency, trust, and convenience.
+             CarDealership is an online automotive marketplace that enables customers to conveniently browse, compare, and purchase new and pre-owned vehicles from the comfort of their homes. The platform offers a wide selection of cars, SUVs complete with detailed specifications, transparent pricing, and vehicle history information to support informed decision-making. With a focus on simplicity and customer satisfaction, Carvista also provides flexible financing options, trade-in services, and secure digital transactions, aiming to modernize the traditional car-buying experience through efficiency, trust, and convenience.
 
             </p>
           </div>
