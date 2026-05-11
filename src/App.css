@@ -50,3 +50,92 @@
   object-fit: cover;
   border-radius: 8px;
 }
+/* Chatbot.css */
+
+.chatbot {
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background: #000;
+  color: gold;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+
+.chat-message {
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 15px;
+  max-width: 75%;
+}
+
+.user {
+  background: #0d6efd;
+  color: white;
+  margin-left: auto;
+}
+
+.bot {
+  background: #e4e6eb;
+  color: black;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  background: white;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.chat-footer button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  background: gold;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.App {
+  background: white;
+  color: black;
+  transition: 0.3s ease;
+  min-height: 100vh;
+}
+
+.App.dark {
+  background: #121212;
+  color: white;
+  background-image: url(/src/components/images/pexels-porsche-1851246_1920.jpg);
+}
+
+/* optional: make header match dark mode */
+.App.dark .app-header {
+  background: #1e1e1e;
+}

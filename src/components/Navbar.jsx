@@ -2,6 +2,8 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 
+
+
 function Navbar() {
   const [user, setUser] = useState(null);
 
@@ -18,15 +20,13 @@ function Navbar() {
     window.location.href = "/signin"; // simple navigation
 
   }
-  const handleLogin = () => {
-    alert("Login clicked");
-  }
-
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-secondary px-3">
       <NavLink className="navbar-brand text-warning fw-bold" to="/">
         CarDealership
       </NavLink>
+     
+   
 
       <button
         className="navbar-toggler"
